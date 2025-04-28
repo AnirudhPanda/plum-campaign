@@ -24,6 +24,9 @@ const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
 `;
 
 const Hero = styled.section`
@@ -33,6 +36,10 @@ const Hero = styled.section`
   justify-content: center;
   text-align: center;
   background: none;
+  @media (max-width: 768px) {
+    min-height: 60vh;
+    padding: 40px 0;
+  }
 `;
 
 const Title = styled(motion.h1)`
@@ -43,6 +50,13 @@ const Title = styled(motion.h1)`
   line-height: 1.1;
   letter-spacing: -2px;
   text-shadow: 0 2px 12px #fde68a44;
+  @media (max-width: 768px) {
+    font-size: 2.4rem;
+    letter-spacing: -1px;
+  }
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
 `;
 
 const Subtitle = styled(motion.p)`
@@ -51,6 +65,13 @@ const Subtitle = styled(motion.p)`
   max-width: 650px;
   margin: 0 auto 2.2rem auto;
   text-shadow: 0 1px 8px #fde68a22;
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    padding: 0 16px;
+  }
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const Button = styled(motion.button)`
@@ -71,11 +92,22 @@ const Button = styled(motion.button)`
     box-shadow: 0 8px 32px #6c267644;
     transform: scale(1.04);
   }
+  @media (max-width: 768px) {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+  }
+  @media (max-width: 480px) {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
 `;
 
 const CampaignSection = styled.section`
   padding: 80px 0 40px 0;
   background: transparent;
+  @media (max-width: 768px) {
+    padding: 60px 0 30px 0;
+  }
 `;
 
 const CardRow = styled.div`
@@ -83,6 +115,9 @@ const CardRow = styled.div`
   flex-wrap: wrap;
   gap: 40px;
   justify-content: center;
+  @media (max-width: 768px) {
+    gap: 24px;
+  }
 `;
 
 const CampaignCard = styled(motion.div)`
@@ -105,12 +140,23 @@ const CampaignCard = styled(motion.div)`
     box-shadow: 0 16px 48px rgba(108,38,118,0.18);
     border-color: ${colors.coral};
   }
+  @media (max-width: 768px) {
+    padding: 36px 24px;
+    min-width: 280px;
+  }
+  @media (max-width: 480px) {
+    padding: 32px 20px;
+    min-width: 100%;
+  }
 `;
 
 const CardIcon = styled.div`
   font-size: 2.2rem;
   color: ${colors.coral};
   margin-bottom: 8px;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 const CampaignTitle = styled.h2`
@@ -118,12 +164,18 @@ const CampaignTitle = styled.h2`
   font-size: 1.6rem;
   margin-bottom: 0.7rem;
   font-weight: 800;
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
 `;
 
 const CampaignDescription = styled.p`
   color: ${colors.text};
   font-size: 1.13rem;
   line-height: 1.7;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const SectionHeading = styled.h3`
@@ -132,6 +184,10 @@ const SectionHeading = styled.h3`
   font-weight: 900;
   margin: 2.5rem 0 1.2rem 0;
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem 0;
+  }
 `;
 
 const TestimonialCard = styled.div`
@@ -169,6 +225,11 @@ const QuizSection = styled.section`
   padding: 60px 0 40px 0;
   border-radius: 32px;
   margin: 40px 0;
+  @media (max-width: 768px) {
+    padding: 40px 0 30px 0;
+    margin: 30px 0;
+    border-radius: 24px;
+  }
 `;
 const QuizContainer = styled.div`
   max-width: 500px;
@@ -178,11 +239,19 @@ const QuizContainer = styled.div`
   box-shadow: 0 4px 16px rgba(108,38,118,0.09);
   padding: 36px 28px;
   text-align: center;
+  @media (max-width: 768px) {
+    padding: 28px 20px;
+    margin: 0 16px;
+  }
 `;
 const QuizQ = styled.h4`
   color: ${colors.plum};
   font-size: 1.2rem;
   margin-bottom: 1.2rem;
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
 `;
 const QuizOptions = styled.div`
   display: flex;
@@ -357,6 +426,9 @@ function CampaignMatchmaker() {
 const BrainSection = styled.section`
   padding: 60px 0 30px 0;
   background: ${colors.cream};
+  @media (max-width: 768px) {
+    padding: 40px 0 20px 0;
+  }
 `;
 
 const BrainHeading = styled.h3`
@@ -388,6 +460,16 @@ const BrainStep = styled.div`
   min-width: 320px;
   max-width: 500px;
   position: relative;
+  @media (max-width: 768px) {
+    padding: 16px 24px;
+    font-size: 1.1rem;
+    min-width: 280px;
+  }
+  @media (max-width: 480px) {
+    padding: 14px 20px;
+    font-size: 1rem;
+    min-width: 100%;
+  }
 `;
 
 const BrainIcon = styled.span`
@@ -478,7 +560,14 @@ const MarqueeText = styled.div`
   letter-spacing: 0.1em;
   padding: 32px 0;
   animation: moveLeftRight 8s linear infinite;
-
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+    padding: 24px 0;
+  }
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+    padding: 20px 0;
+  }
   @keyframes moveLeftRight {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100vw); }
@@ -517,6 +606,16 @@ const InstaBanner = styled.a`
     color: #6c2676;
     transform: scale(1.04);
     text-decoration: underline;
+  }
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    padding: 16px 28px;
+    margin: 24px auto 0 auto;
+  }
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    padding: 14px 24px;
+    margin: 20px auto 0 auto;
   }
 `;
 
